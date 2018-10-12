@@ -13,7 +13,7 @@ dresdenMarkov.seed(stream);
 
 
 bot.on("text", (message) => {
-	var returnmsg = dresdenMarkov.respond(message.text).join(' ');
+	var returnmsg = dresdenMarkov.respond(message.text, message.text.split(' ').length*(Math.random()*3+1)).join(' ');
 	bot.sendMessage(message.chat.id, returnmsg);
 });
 
